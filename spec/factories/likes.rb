@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :like do
-    post nil
-user nil
+    association :post, strategy: :build
+    association :user, strategy: :build
   end
-
 end

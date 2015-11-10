@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :comment do
-    body "MyText"
-post ""
-user ""
+    body { Faker::Lorem.paragraph }
+    association :post, strategy: :build
+    association :user, strategy: :build
   end
-
 end
