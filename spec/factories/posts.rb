@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :post do
     # the initial value can be passed to `sequence`
-    # also; other attributes can be accessed when generating a value
     sequence(:title, 'a') { |c| "Factory generated post #{c}" }
     # create fake data with gems like `faker` to randomize factory results
     body { Faker::Lorem.paragraphs(5) }

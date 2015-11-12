@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :user, aliases: [:author, :liker, :commenter] do
     # static values can/should be passed without a block
     name 'Username'
+    # other attributes can be accessed when generating a value
     email { "#{name.parameterize}+#{SecureRandom.uuid}@email.dummy" }
     password { SecureRandom.base64.first(16) }
 
